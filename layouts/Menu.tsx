@@ -1,8 +1,3 @@
-/* eslint-disable no-undef */
-/* eslint-disable react/prop-types */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
-/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import styled from "styled-components"
 import Link from "next/link"
 
@@ -27,30 +22,14 @@ const NavContainer = styled.div`
     font-weight: bold;
     color: #c5c5c5;
     cursor: pointer;
-
+    transition-duration: 0.4s;
     :hover {
       color: #2a2b2a;
-      transition-property: right;
-      transition-duration: 0.4s;
-      transition-timing-function: ease-out;
       a {
         display: inline-flex;
         align-items: center;
         height: 20px;
-        /* background: #fed9ca; */
-        ::before {
-          content: "";
-          background-color: #fed9ca;
-          position: absolute;
-          left: 0;
-          right: 100%;
-          bottom: 1.6rem;
-          z-index: -1;
-          height: 2.5rem;
-          transition-property: right;
-          transition-duration: 0.4s;
-          transition-timing-function: ease-out;
-        }
+        background: #fed9ca;
       }
     }
   }

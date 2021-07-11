@@ -1,5 +1,3 @@
-/* eslint-disable jsx-a11y/no-static-element-interactions */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
 import { useState } from "react"
 import styled from "styled-components"
 import { AiOutlineMenu } from "react-icons/ai"
@@ -9,10 +7,9 @@ const Container = styled.div`
   padding: 26px 35px;
   display: flex;
   justify-content: space-between;
-  font-size: 0.81rem;
+  font-size: 16px;
   padding: 1.56rem 4.75rem;
   line-height: 1.23;
-
   .logo {
     cursor: pointer;
   }
