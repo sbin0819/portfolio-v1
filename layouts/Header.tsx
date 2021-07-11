@@ -1,5 +1,9 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+import { useState } from "react"
 import styled from "styled-components"
 import { AiOutlineMenu } from "react-icons/ai"
+import Menu from "./Menu"
 
 const Container = styled.div`
   padding: 26px 35px;
@@ -21,17 +25,22 @@ const Container = styled.div`
   }
 `
 const index = () => {
+  const [isOpen, setIsOpen] = useState(false)
+  const onClose = () => {
+    setIsOpen(false)
+  }
   return (
     <Container>
       <div className="logo">SUBI PORTFOLIO</div>
       <div>
-        <div className="menu">
+        <div className="menu" onClick={() => setIsOpen(true)}>
           <div>MENU</div>
           <div>
             <AiOutlineMenu />
           </div>
         </div>
       </div>
+      {isOpen && <Menu onClose={onClose} />}
     </Container>
   )
 }
