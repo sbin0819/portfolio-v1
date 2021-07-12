@@ -29,37 +29,15 @@ const CardContainer = styled.div`
   }
 `
 
-const Card = styled.div`
-  max-width: 380px;
-  min-width: 300px;
-  height: 500px;
-  background: #f5f5f5;
-  border-radius: 8px;
-  cursor: pointer;
-
-  :hover {
-    transform: scale(1.12);
-    background: linear-gradient(red, pink);
-
-    transition: all ease 2s 0s;
-  }
-`
-
-const works = () => {
+const skills = () => {
   return (
     <Container>
       <TitleContainer>
-        <h2>
-          Lastest <span>Project</span>
-        </h2>
+        <h2>Skills</h2>
       </TitleContainer>
-      <CardContainer>
-        <Card>a</Card>
-        <Card>a</Card>
-        <Card>a</Card>
-      </CardContainer>
+      <CardContainer>a</CardContainer>
     </Container>
   )
 }
 
-export default works
+export default skills
