@@ -20,6 +20,9 @@ const Container = styled.div`
     cursor: pointer;
     gap: 5px;
   }
+  @media only screen and (max-width: 800px) {
+    padding: 26px 30px;
+  }
 `
 const index = () => {
   const [isOpen, setIsOpen] = useState(false)

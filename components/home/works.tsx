@@ -115,14 +115,14 @@ const works = () => {
     <Container>
       <TitleContainer>
         <h2>
-          Lastest <span>Project</span>
+          Lastest <span>Works</span>
         </h2>
       </TitleContainer>
       <CardContainer>
         <Card>
           <CardContent>
             <p>Development</p>
-            <h4>오늘의 집 클론</h4>
+            <h4>e-commerce</h4>
             <Link href="/">VIEW DETAILS</Link>
           </CardContent>
           <Image
