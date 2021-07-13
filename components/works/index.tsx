@@ -3,25 +3,29 @@ import styled from "styled-components"
 
 const Container = styled.div`
   display: flex;
-  flex-wrap: wrap;
   margin-top: 100px;
-  padding: 0 50px;
+  padding: 0 40px;
   gap: 40px;
+  @media only screen and (max-width: 800px) {
+    display: block;
+    padding: 0 20px;
+  }
 `
 
 const ImageContainer = styled.div`
   flex: 1.2;
-  min-width: 350px;
   div {
     margin-bottom: 30px;
     height: 300px;
     background: #f5f5f5;
+    @media only screen and (max-width: 800px) {
+      height: 250px;
+    }
   }
 `
 
 const ContentContainer = styled.div`
   flex: 1;
-  min-width: 330px;
   h5 {
     font-family: Ubuntu-Bold, sans-serif;
     color: #2b2b2b;
@@ -66,7 +70,6 @@ const IdeaContainer = styled.div`
 
 const ProductFeatures = styled.div`
   margin-top: 50px;
-
   ul {
     margin-left: 1.3rem;
     color: #747474;
@@ -83,7 +86,6 @@ const index = () => {
   return (
     <Container>
       <ImageContainer>
-        <div></div>
         <div></div>
         <div></div>
         <div></div>

@@ -110,7 +110,6 @@ const CardContent = styled.div`
 `
 
 const works = () => {
-  console.log(cardSrc.c_01)
   return (
     <Container>
       <TitleContainer>

@@ -1,4 +1,5 @@
 import { useState } from "react"
+import Link from "next/link"
 import styled from "styled-components"
 import { AiOutlineMenu } from "react-icons/ai"
 import Menu from "./Menu"
@@ -31,7 +32,9 @@ const index = () => {
   }
   return (
     <Container>
-      <div className="logo">SUBI PORTFOLIO</div>
+      <div className="logo">
+        <Link href="/">SUBI PORTFOLIO</Link>
+      </div>
       <div>
         <div className="menu" onClick={() => setIsOpen(true)}>
           <div>MENU</div>
