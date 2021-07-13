@@ -2,7 +2,7 @@ import Link from "next/link"
 import Image from "next/image"
 import styled from "styled-components"
 
-import { cardSrc } from "./image"
+import { cardSrc } from "./images"
 
 const Container = styled.div``
 
@@ -123,7 +123,7 @@ const works = () => {
           <CardContent>
             <p>Development</p>
             <h4>e-commerce</h4>
-            <Link href="/">VIEW DETAILS</Link>
+            <Link href="/works/1">VIEW DETAILS</Link>
           </CardContent>
           <Image
             src={`${cardSrc.c_01}`}
@@ -138,6 +138,12 @@ const works = () => {
             <h4>Chatting App</h4>
             <Link href="/">VIEW DETAILS</Link>
           </CardContent>
+          <Image
+            src={`${cardSrc.c_02}`}
+            layout="fill"
+            objectFit="cover"
+            quality="100"
+          />
         </Card>
         <Card>
           <CardContent>
@@ -145,6 +151,12 @@ const works = () => {
             <h4>GOOD AWESOME!</h4>
             <Link href="/">VIEW DETAILS</Link>
           </CardContent>
+          <Image
+            src={`${cardSrc.c_03}`}
+            layout="fill"
+            objectFit="cover"
+            quality="100"
+          />
         </Card>
       </CardContainer>
     </Container>
