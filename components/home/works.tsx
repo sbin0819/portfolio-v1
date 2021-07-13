@@ -1,4 +1,8 @@
-import styled, { css } from "styled-components"
+import Link from "next/link"
+import Image from "next/image"
+import styled from "styled-components"
+
+import { cardSrc } from "./image"
 
 const Container = styled.div``
 
@@ -30,22 +34,83 @@ const CardContainer = styled.div`
 `
 
 const Card = styled.div`
+  position: relative;
   max-width: 380px;
   min-width: 300px;
   height: 500px;
-  background: #f5f5f5;
-  border-radius: 8px;
   cursor: pointer;
+  img {
+    border-radius: 8px;
+  }
+  :before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 100;
+    border-radius: 8px;
+  }
 
   :hover {
     transform: scale(1.12);
-    background: linear-gradient(red, pink);
-
     transition: all ease 2s 0s;
+    :before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      border-radius: 8px;
+      background: linear-gradient(red, pink);
+      opacity: 0.7;
+      z-index: 200;
+    }
+  }
+`
+
+const CardContent = styled.div`
+  position: relative;
+  top: 45%;
+  text-align: center;
+  color: #fff;
+  z-index: 300;
+  font-size: 40px;
+  p {
+    color: #c6c9d8;
+    font-size: 16px;
+    padding: 0 0 15px;
+  }
+  h4 {
+    font-size: 24px;
+    line-height: 36px;
+    padding: 0 0 15px;
+  }
+  a {
+    padding: 0 23px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    border: 2px solid #fff;
+    border-radius: 4px;
+    font-size: 14px;
+    position: relative;
+    color: #fff;
+    letter-spacing: 0.2px;
+    text-transform: uppercase;
+    /* color: #f9004d; */
+    :hover {
+      background: #f9004d;
+      border: 2px solid #f9004d;
+    }
   }
 `
 
 const works = () => {
+  console.log(cardSrc.c_01)
   return (
     <Container>
       <TitleContainer>
@@ -54,9 +119,33 @@ const works = () => {
         </h2>
       </TitleContainer>
       <CardContainer>
-        <Card>a</Card>
-        <Card>a</Card>
-        <Card>a</Card>
+        <Card>
+          <CardContent>
+            <p>Development</p>
+            <h4>오늘의 집 클론</h4>
+            <Link href="/">VIEW DETAILS</Link>
+          </CardContent>
+          <Image
+            src={`${cardSrc.c_01}`}
+            layout="fill"
+            objectFit="cover"
+            quality="100"
+          />
+        </Card>
+        <Card>
+          <CardContent>
+            <p>Development</p>
+            <h4>Chatting App</h4>
+            <Link href="/">VIEW DETAILS</Link>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardContent>
+            <p>Development</p>
+            <h4>GOOD AWESOME!</h4>
+            <Link href="/">VIEW DETAILS</Link>
+          </CardContent>
+        </Card>
       </CardContainer>
     </Container>
   )

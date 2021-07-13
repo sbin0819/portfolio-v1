@@ -1,13 +1,14 @@
 import { createGlobalStyle } from "styled-components"
-
+import reset from "styled-reset"
 const GlobalStyle = createGlobalStyle`
+  ${reset}
   * {
     margin: 0;
     padding: 0;
   }
   html, body {
-  height: 100%;
-  overflow: auto;
+  /* height: 100%; */
+  /* overflow: auto; */
   }
   a{
     text-decoration: none;
