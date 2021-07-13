@@ -1,3 +1,5 @@
+import Link from "next/link"
+import router from "next/router"
 import styled from "styled-components"
 import meSrc from "../../public/me.jpeg"
 import Image from "next/image"
@@ -42,15 +44,59 @@ const Button = styled.button`
   -webkit-box-pack: justify;
   justify-content: space-between;
   user-select: none;
-  transform: perspective(1px) translateZ(0px);
   position: relative;
   overflow: hidden;
   border: none;
   white-space: nowrap;
   color: rgb(255, 255, 255);
   background-color: rgb(86, 179, 129);
-  transition: all 0.4s ease-out 0s;
+
   outline: none !important;
+  cursor: pointer;
+  :hover {
+  }
+`
+
+const Test = styled.div`
+  a {
+    display: block;
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: #333;
+    border: 2px solid rgb(86, 179, 129);
+    letter-spacing: 2px;
+    text-align: center;
+    position: relative;
+    transition: all 0.35s;
+  }
+
+  a span {
+    position: relative;
+    z-index: 2;
+  }
+
+  a:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: rgb(86, 179, 129);
+    transition: all 0.35s;
+  }
+
+  a:hover {
+    color: #fff;
+  }
+
+  a:hover:after {
+    width: 100%;
+  }
 `
 
 const main = () => {
@@ -60,8 +106,17 @@ const main = () => {
       <h1>HI, I AM SUBIN</h1>
       <span>WEB DEVELOPER</span>
       <div style={{ marginTop: "30px" }}>
-        <Button>LET'S TALK NOW</Button>
+        <Button onClick={() => router.push("/contacts")}>LET'S TALK NOW</Button>
       </div>
+      {/* <Test>
+        <div className="wrapper">
+          <Link href="/">
+            <a>
+              <span>LET'S TALK NOW</span>
+            </a>
+          </Link>
+        </div>
+      </Test> */}
     </Container>
   )
 }
